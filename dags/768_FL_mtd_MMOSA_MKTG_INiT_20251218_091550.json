@@ -1,0 +1,23 @@
+{
+	"HUB_ADDRESSES" : {"dependencies": ["HUB_MMKTG_ADDRESSES_INIT"], "schema": "MOSADV_FL"},
+	"HUB_PRODUCTS" : {"dependencies": ["HUB_MMKTG_PRODUCTS_INIT"], "schema": "MOSADV_FL"},
+	"HUB_CAMPAIGNS" : {"dependencies": ["HUB_MMKTG_CAMPAIGNS_INIT"], "schema": "MOSADV_FL"},
+	"HUB_CUSTOMERS" : {"dependencies": ["HUB_MMKTG_CUSTOMERS_INIT"], "schema": "MOSADV_FL"},
+	"HUB_CONTACTS" : {"dependencies": ["HUB_MMKTG_CONTACTS_INIT"], "schema": "MOSADV_FL"},
+	"SAT_MMKTG_PRODUCTS" : {"dependencies": ["SAT_MMKTG_PRODUCTS_INIT"], "schema": "MOSADV_FL"},
+	"SAT_MMKTG_PHONES" : {"dependencies": ["SAT_MMKTG_PHONES_INIT"], "schema": "MOSADV_FL"},
+	"SAT_MMKTG_E_MAILS" : {"dependencies": ["SAT_MMKTG_EMAILS_INIT"], "schema": "MOSADV_FL"},
+	"SAT_MMKTG_CONTACTS" : {"dependencies": ["SAT_MMKTG_CONTACTS_INIT"], "schema": "MOSADV_FL"},
+	"SAT_MMKTG_ADDRESSES" : {"dependencies": ["SAT_MMKTG_ADDRESSES_INIT"], "schema": "MOSADV_FL"},
+	"SAT_MMKTG_CAMPAIGNS" : {"dependencies": ["SAT_MMKTG_CAMPAIGNS_INIT"], "schema": "MOSADV_FL"},
+	"SAT_MMKTG_CUSTOMERS_SENSITIVE" : {"dependencies": ["SAT_MMKTG_CUSTOMERS_SENSITIVE_INIT"], "schema": "MOSADV_FL"},
+	"SAT_MMKTG_CUSTOMERS_MAIN" : {"dependencies": ["SAT_MMKTG_CUSTOMERS_MAIN_INIT"], "schema": "MOSADV_FL"},
+	"LNK_CUSTOMERS_ADDRESSES" : {"dependencies": ["LNK_MMKTG_CUSTOMERS_ADDRESSES_INIT"], "schema": "MOSADV_FL"},
+	"LKS_MMKTG_CUSTOMERS_ADDRESSES" : {"dependencies": ["LKS_MMKTG_CUSTOMERS_ADDRESSES_INIT"], "schema": "MOSADV_FL"},
+	"LND_CAMPAIGN_MOTORCYCLES" : {"dependencies": ["LND_MMKTG_CAMPAIGN_MOTORCYCLES_INIT"], "schema": "MOSADV_FL"},
+	"LND_PARTY_CONTACTS" : {"dependencies": ["LND_MMKTG_PARTY_CONTACTS_INIT"], "schema": "MOSADV_FL"},
+	"LND_CAMP_PART_CONT" : {"dependencies": ["LND_MMKTG_CAMP_PART_CONT_INIT"], "schema": "MOSADV_FL"},
+	"LDS_MMKTG_CAMPAIGN_MOTORCYCLES" : {"dependencies": ["LDS_MMKTG_CAMPAIGNMOTORCYCLES_INIT"], "schema": "MOSADV_FL"},
+	"LDS_MMKTG_PARTY_CONTACTS" : {"dependencies": ["LDS_MMKTG_PARTYCONTACTS_INIT"], "schema": "MOSADV_FL"},
+	"LDS_MMKTG_CAMP_PART_CONT" : {"dependencies": ["LDS_MMKTG_CAMPPARTCONT_INIT"], "schema": "MOSADV_FL"}
+}

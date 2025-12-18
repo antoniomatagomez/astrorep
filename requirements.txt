@@ -1,0 +1,21 @@
+# VaultSpeed FMC Plugin dependencies
+croniter>=0.3
+flask_admin>=1.5.8
+flask_appbuilder
+flask_babel
+
+# Snowflake connector (required for snowflake_hook.py)
+# Pinned to 3.x to avoid session_parameters bug in 4.x
+snowflake-connector-python>=3.6.0,<3.13.0
+
+# Cryptography (required for private key authentication)
+cryptography
+
+# Databricks provider (required for databricks_hook.py and databricks_operator.py)
+apache-airflow-providers-databricks
+
+# JDBC provider (required for jdbc_hook.py and jdbc_operator.py)
+apache-airflow-providers-jdbc
+
+# JayDeBeApi (required for singlestore_hook.py and jdbc connections)
+jaydebeapi

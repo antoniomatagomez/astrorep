@@ -1,0 +1,5 @@
+apache-airflow>=1.8.1
+croniter>=0.3
+flask_admin>=1.5.8
+flask_appbuilder
+flask_babel
