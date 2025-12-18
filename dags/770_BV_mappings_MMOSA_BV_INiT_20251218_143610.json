@@ -1,0 +1,7 @@
+{
+	"BV_PIT_DETAIL_ADDRESSES_PIT_INIT" : {"dependencies": ["fmc_mtd"], "map_schema": "\"MOSA_PROJECT_PROC\"", "input":[], "map_type":"sql_mapping"},
+	"BV_PIT_DETAIL_CUSTOMERS_PIT_INIT" : {"dependencies": ["fmc_mtd"], "map_schema": "\"MOSA_PROJECT_PROC\"", "input":[], "map_type":"sql_mapping"},
+	"BV_PIT_DETAIL_PRODUCTS_PIT_INIT" : {"dependencies": ["fmc_mtd"], "map_schema": "\"MOSA_PROJECT_PROC\"", "input":[], "map_type":"sql_mapping"},
+	"BV_PIT_DETAIL_CUSTOMERS_ADDRESSES_CUSTOMERSHIPTOADDRESSID_PIT_INIT" : {"dependencies": ["fmc_mtd"], "map_schema": "\"MOSA_PROJECT_PROC\"", "input":[], "map_type":"sql_mapping"},
+	"BV_BRIDGE_CUSTOMER_SHIPTO_ADDR_BRIDGE_INIT" : {"dependencies": ["fmc_mtd"], "map_schema": "\"MOSA_PROJECT_PROC\"", "input":[], "map_type":"sql_mapping"}
+}
