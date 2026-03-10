@@ -1,0 +1,10 @@
+{
+	"HUB_INVOICES" : {"dependencies": ["HUB_ISLS_INVOICES_INIT"], "schema": "I_VSP_FL"},
+	"HUB_INVOICE_LINES" : {"dependencies": ["HUB_ISLS_INVOICE_LINES_INIT"], "schema": "I_VSP_FL"},
+	"SAT_ISLS_INVOICE_LINES" : {"dependencies": ["SAT_ISLS_INVOICELINES_INIT"], "schema": "I_VSP_FL"},
+	"SAT_ISLS_INVOICES" : {"dependencies": ["SAT_ISLS_INVOICES_INIT"], "schema": "I_VSP_FL"},
+	"LNK_INVOICELINES_INVOICES" : {"dependencies": ["LNK_ISLS_INVOICELINES_INVOICES_INIT"], "schema": "I_VSP_FL"},
+	"LNK_INVOICES_CUSTOMERS" : {"dependencies": ["LNK_ISLS_INVOICES_CUSTOMERS_INIT"], "schema": "I_VSP_FL"},
+	"LKS_ISLS_INVOICES_CUSTOMERS" : {"dependencies": ["LKS_ISLS_INVOICES_CUSTOMERS_INIT"], "schema": "I_VSP_FL"},
+	"LKS_ISLS_INVOICELINES_INVOICES" : {"dependencies": ["LKS_ISLS_INVOICELINES_INVOICES_INIT"], "schema": "I_VSP_FL"}
+}
