@@ -3,7 +3,7 @@ name: Sync FMC to DAGs
 on:
   push:
     branches: [dagonly_branch]   # branch mapped to Astro deployment
-    paths: ['vaultspeed_fmc/**'] # only when files under vaultspeed_fmc change
+    paths: ['vaultspeed_fmc/FMC/**', 'vaultspeed_fmc/**'] # when FMC-generated files change
   # workflow_dispatch:          # uncomment to allow "Run workflow" from Actions tab
 
 jobs:
@@ -14,14 +14,18 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: dagonly_branch
-          token: ${{ secrets.PAT_TOKEN }}  # or a PAT for push
+          token: ${{ secrets.PAT_TOKEN }}
 
-      - name: Clean dags/ then copy vaultspeed_fmc (.py and .json)
+      - name: Clean dags/ then copy vaultspeed_fmc/FMC (.py and .json)
         run: |
           mkdir -p dags
           find dags -mindepth 1 -delete
-          cp vaultspeed_fmc/*.py dags/ 2>/dev/null || true
-          cp vaultspeed_fmc/*.json dags/ 2>/dev/null || true
+          cp vaultspeed_fmc/FMC/*.py dags/ 2>/dev/null || true
+          cp vaultspeed_fmc/FMC/*.json dags/ 2>/dev/null || true
+
+      - name: Ensure a change to commit (avoid Git ignoring identical files)
+        run: |
+          echo "Synced at $(date -u +%Y-%m-%dT%H:%M:%SZ) - run ${{ github.run_id }}" > dags/.last_sync
 
       - name: Commit and push dags/
         env:
