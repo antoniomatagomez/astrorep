@@ -10,13 +10,15 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repo (dagonly_branch)
         uses: actions/checkout@v4
         with:
+          ref: dagonly_branch
           token: ${{ secrets.GITHUB_TOKEN }}  # or a PAT for push
 
       - name: Clean dags/ then copy vaultspeed_fmc (.py and .json)
         run: |
+          mkdir -p dags
           find dags -mindepth 1 -delete
           cp vaultspeed_fmc/*.py dags/ 2>/dev/null || true
           cp vaultspeed_fmc/*.json dags/ 2>/dev/null || true
