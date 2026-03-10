@@ -1,0 +1,3 @@
+{
+	"PIT_DETAIL_CUSTOMERS" : {"dependencies": ["BV_PIT_DETAIL_CUSTOMERS_PIT_INIT"], "schema": "MOSA_DV_BV"}
+}

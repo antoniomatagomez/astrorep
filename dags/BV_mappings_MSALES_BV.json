@@ -1,0 +1,3 @@
+{
+	"BV_PIT_DETAIL_CUSTOMERS_PIT_INIT" : {"dependencies": ["fmc_mtd"], "map_schema": "\"MOSA_PROJECT_PROC\"", "input":[], "map_type":"sql_mapping"}
+}
