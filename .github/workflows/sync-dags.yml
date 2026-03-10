@@ -1,0 +1,30 @@
+name: Sync FMC to DAGs
+
+on:
+  push:
+    branches: [dagonly_branch]   # branch mapped to Astro deployment
+    paths: ['vaultspeed_fmc/**'] # only when files under vaultspeed_fmc change
+  # workflow_dispatch:          # uncomment to allow "Run workflow" from Actions tab
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}  # or a PAT for push
+
+      - name: Clean dags/ then copy vaultspeed_fmc (.py and .json)
+        run: |
+          find dags -mindepth 1 -delete
+          cp vaultspeed_fmc/*.py dags/ 2>/dev/null || true
+          cp vaultspeed_fmc/*.json dags/ 2>/dev/null || true
+
+      - name: Commit and push dags/
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A dags/
+          git diff --staged --quiet || git commit -m "Sync vaultspeed_fmc to dags [automated]"
+          git push
